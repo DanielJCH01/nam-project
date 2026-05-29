@@ -4,7 +4,7 @@ function login(){
     let password = document.getElementById("password").value;
     let mensaje = document.getElementById("mensaje");
 
-    fetch("http://localhost:3000/login", {
+    fetch("https://nam-backend-p85u.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
