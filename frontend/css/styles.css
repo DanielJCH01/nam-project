@@ -77,31 +77,24 @@
     }
 
     nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--muted);
-      text-decoration: none;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.82rem;
-      font-weight: 700;
-      transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    transition: all 0.2s;
+    padding: 0 10px; /* 👈 IMPORTANTE */
+    width: auto; /* 👈 quitar el 36px fijo */
+
     }
 
-    .log {
-      padding: 0 12px;
-      width: auto;
-    }
-
-    .log2 {
-      padding: 0 12px;
-      width: auto;
-    }
 
     nav a:hover,
     nav a.Brillo {
