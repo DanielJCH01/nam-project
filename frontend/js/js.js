@@ -51,5 +51,5 @@ document.addEventListener("DOMContentLoaded", actualizarUsuario);
 
 function logout(){
     localStorage.removeItem("sesion");
-    window.location.href = "./html/login.html";
+    window.location.href = "./index.html";
 }
