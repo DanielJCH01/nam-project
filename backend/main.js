@@ -11,7 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 /* ───────── CONEXIÓN MONGODB ───────── */
-mongoose.connect("mongodb+srv://danieljchctpa_db_user:Daniel_1107@cluster0.pfpfjtz.mongodb.net/loginDB?retryWrites=true&w=majority")
+
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log("Mongo conectado"))
 .catch(err => console.log(err));
 
