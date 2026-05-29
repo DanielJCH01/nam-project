@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registro</title>
+
+  <link rel="stylesheet" href="/frontend/css/registro.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="login-header">
+      <span class="logo-badge">JS</span>
+      <h1 class="login-title">Registro</h1>
+    </div>
+
+    <div class="login-content">
+
+      <p class="login-text">
+        Crea tu cuenta para acceder al sistema
+      </p>
+
+      <form onsubmit="event.preventDefault(); registrar();">
+
+        <input type="text" id="nuevoUsuario" placeholder="Usuario">
+
+        <input type="password" id="nuevaPassword" placeholder="Contraseña">
+
+        <button type="submit">
+          Registrarse
+        </button>
+
+      </form>
+
+      <p id="mensaje"></p>
+
+      <a href="login.html" class="volver">
+        ← Ya tengo cuenta
+      </a>
+
+    </div>
+
+  </div>
+
+  <script src="/frontend/js/registro.js"></script>
+
+</body>
+</html>

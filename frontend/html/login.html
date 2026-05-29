@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="/frontend/css/login.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="login-header">
+      <span class="logo-badge">JS</span>
+      <h1 class="login-title">Login</h1>
+    </div>
+
+    <div class="login-content">
+
+      <p class="login-text">
+        Inicia sesión para continuar.
+      </p>
+
+      <form onsubmit="event.preventDefault(); login();">
+
+        <input type="text" id="usuario" placeholder="Usuario">
+
+        <input type="password" id="password" placeholder="Contraseña">
+
+        <button type="submit">
+          Iniciar Sesión
+        </button>
+
+      </form>
+
+      <p id="mensaje"></p>
+
+      <a href="registro.html" class="volver">
+        ← Crear cuenta
+      </a>
+
+    </div>
+
+  </div>
+
+  <script src="/frontend/js/login.js"></script>
+
+</body>
+</html>

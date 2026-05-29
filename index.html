@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Básico</title>
+
+  <link rel="stylesheet" href="/frontend/css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+
+  <a class="header-logo" href="#">
+    <span class="logo-badge">JS</span>
+
+    <span class="logo-title">
+      Básico / <span id="usuarioLogueado">Invitado</span>
+    </span>
+  </a>
+
+  <nav>
+    <a href="#sec1" class="Brillo">1</a>
+    <a href="#sec2">2</a>
+    <a href="#sec3">3</a>
+    <a href="#sec4">4</a>
+    <a href="#sec5">5</a>
+    <a href="#sec6">6</a>
+
+    <a class="log" href="/frontend/html/login.html">LOGIN</a>
+    <a class="log" href="/frontend/html/registro.html">Registrarse</a>
+    <a class="log" href="#" onclick="logout()" id="logoutLink">Cerrar</a>
+  </nav>
+
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <p class="hero-tag">// Guía</p>
+
+  <h1>JavaScript<br><span>desde cero.</span></h1>
+
+  <p>
+    Aprende los conceptos fundamentales de JavaScript con ejemplos de código interactivos al estilo terminal.
+  </p>
+</div>
+
+<!-- ══════════ SECTIONS ══════════ -->
+<div class="sections">
+
+<!-- 1 VARIABLES -->
+<section class="section" id="sec1">
+
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>Variables</h2>
+  </div>
+
+  <div class="section-body">
+
+    <div class="section-desc">
+      Variables con <strong>let</strong>, <strong>const</strong> y <strong>var</strong>.
+    </div>
+
+    <div class="code-block">
+
+<pre>
+<span class="pr">js&gt;</span> <span class="kw">let</span> nombre <span class="op">=</span> <span class="str">"JavaScript"</span>
+<span class="pr">js&gt;</span> <span class="kw">const</span> version <span class="op">=</span> <span class="num">2026</span>
+<span class="pr">js&gt;</span> <span class="fn">console</span>.<span class="fn">log</span>(nombre, version)
+</pre>
+
+      <div class="code-output">
+        <span class="output-arrow">▶</span> JavaScript 2026
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 2 TIPOS -->
+<section class="section" id="sec2">
+
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Tipos de datos</h2>
+  </div>
+
+  <div class="section-body">
+
+    <div class="section-desc">
+      Tipos primitivos en JavaScript.
+    </div>
+
+<pre>
+<span class="pr">js&gt;</span> typeof "Hola"
+"string"
+
+<span class="pr">js&gt;</span> typeof 42
+"number"
+
+<span class="pr">js&gt;</span> typeof true
+"boolean"
+</pre>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 3 CONDICIONALES -->
+<section class="section" id="sec3">
+
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>Condicionales</h2>
+  </div>
+
+  <div class="section-body">
+
+<pre>
+<span class="pr">js&gt;</span> <span class="kw">let</span> edad <span class="op">=</span> <span class="num">18</span>
+
+<span class="kw">if</span>(edad >= 18){
+  <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">"Mayor de edad"</span>)
+}
+</pre>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 4 FUNCIONES -->
+<section class="section" id="sec4">
+
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2>Funciones</h2>
+  </div>
+
+  <div class="section-body">
+
+<pre>
+<span class="kw">function</span> saludar(nombre){
+  <span class="kw">return</span> <span class="str">"Hola "</span> + nombre
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(saludar(<span class="str">"Daniel"</span>))
+</pre>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 5 ARRAYS -->
+<section class="section" id="sec5">
+
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2>Arrays</h2>
+  </div>
+
+  <div class="section-body">
+
+<pre>
+<span class="kw">let</span> frutas <span class="op">=</span> [<span class="str">"manzana"</span>, <span class="str">"banana"</span>]
+
+frutas.push(<span class="str">"uva"</span>)
+</pre>
+
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 6 EVENTOS -->
+<section class="section" id="sec6">
+
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2>Eventos</h2>
+  </div>
+
+  <div class="section-body">
+
+    <div class="section-desc">
+      Los <strong>eventos</strong> permiten que JavaScript responda a acciones del usuario como clicks, teclas o movimientos.
+    </div>
+
+    <div class="code-block">
+
+<pre>
+<span class="pr">js&gt;</span> <span class="kw">document</span>.<span class="fn">addEventListener</span>(<span class="str">"click"</span>, () => {
+  <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">"Hiciste click"</span>)
+})
+</pre>
+
+      <div class="code-output">
+        <span class="output-arrow">▶</span> Evento click detectado
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</div>
+
+<footer>
+  // JavaScript Básico · 2026
+</footer>
+
+<script src="/frontend/js/js.js"></script>
+
+</body>
+</html>
