@@ -10,7 +10,7 @@ function registrar(){
         return;
     }
 
-    fetch("http://localhost:3000/register", {
+    fetch("https://nam-backend-p85u.onrender.com/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
