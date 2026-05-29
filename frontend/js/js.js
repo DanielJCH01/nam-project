@@ -9,34 +9,26 @@ const observer = new IntersectionObserver(entries => {
 
         if(entry.isIntersecting){
 
-            navLinks.forEach(link => {
-                link.classList.remove('Brillo');
-            });
+            navLinks.forEach(link => link.classList.remove('Brillo'));
 
-            const id = entry.target.id;
-
-            const link = document.querySelector(`nav a[href="#${id}"]`);
+            const link = document.querySelector(`nav a[href="#${entry.target.id}"]`);
 
             if(link){
                 link.classList.add('Brillo');
             }
-
         }
-
     });
 
 }, {
     rootMargin: '-40% 0px -50% 0px'
 });
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+sections.forEach(section => observer.observe(section));
 
 
-/* ───────── UI SESIÓN ───────── */
+/* ───────── SESIÓN ───────── */
 
-document.addEventListener("DOMContentLoaded", () => {
+function actualizarUsuario(){
 
     let sesion = localStorage.getItem("sesion");
 
@@ -48,15 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if(logoutLink){
-        logoutLink.style.display = sesion ? "inline" : "none";
+        logoutLink.style.display = sesion ? "inline-flex" : "none";
     }
+}
 
-});
+document.addEventListener("DOMContentLoaded", actualizarUsuario);
 
 
 /* ───────── LOGOUT ───────── */
 
 function logout(){
     localStorage.removeItem("sesion");
-    window.location.href = "/html/login.html";
+    window.location.href = "./html/login.html";
 }
