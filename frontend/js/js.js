@@ -33,6 +33,7 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+
 /* ───────── UI SESIÓN ───────── */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,18 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if(logoutLink){
-        if(sesion){
-            logoutLink.style.display = "inline";
-        }else{
-            logoutLink.style.display = "none";
-        }
+        logoutLink.style.display = sesion ? "inline" : "none";
     }
 
 });
+
 
 /* ───────── LOGOUT ───────── */
 
 function logout(){
     localStorage.removeItem("sesion");
-    window.location.href = "login.html";
+    window.location.href = "/html/login.html";
 }
