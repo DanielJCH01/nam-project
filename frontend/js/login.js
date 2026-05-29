@@ -14,7 +14,9 @@ function login(){
             password
         })
     })
+
     .then(res => res.json())
+
     .then(data => {
 
         if(data.usuario){
@@ -25,7 +27,10 @@ function login(){
             localStorage.setItem("sesion", data.usuario);
 
             setTimeout(() => {
-                window.location.href = "index.html";
+
+                // ✅ REDIRECCIÓN CORRECTA
+                window.location.href = "/index.html";
+
             }, 1200);
 
         } else {
@@ -36,9 +41,12 @@ function login(){
         }
 
     })
+
     .catch(err => {
+
         mensaje.style.color = "#f06a6a";
         mensaje.innerHTML = "✖ Error de conexión con el servidor";
+
     });
 
 }
